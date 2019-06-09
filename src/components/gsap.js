@@ -1,5 +1,5 @@
 import React from "react"
-import { TimelineMax, Power2, Power4 } from "gsap/all"; 
+import { TimelineMax, Power2, Power4 } from "gsap"; 
 
 
 export default class MyAnimation extends React.Component {

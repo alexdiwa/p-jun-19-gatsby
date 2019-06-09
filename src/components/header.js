@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import MyAnimation from "./gsap.js"
+
 
 const Header = ({ siteTitle }) => (
   <header
@@ -28,6 +30,9 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
+    <div>
+      <MyAnimation></MyAnimation>
+    </div>
   </header>
 )
 
@@ -38,5 +43,7 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+
 
 export default Header

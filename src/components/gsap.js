@@ -1,6 +1,6 @@
 import React from "react"
 import { TimelineMax, Power2, Power4 } from "gsap"; 
-
+import "./gsap.scss"
 
 export default class MyAnimation extends React.Component {
   componentDidMount() {
@@ -29,9 +29,9 @@ export default class MyAnimation extends React.Component {
           d: "M42.287,80.572c0,0 5.667,0.959 19.581,0.38c15.231,-0.634 26.001,-5.791 31.264,-10.103c5.106,-4.182 16.345,-24.818 7.857,-39.701c-11.746,-20.593 -36.822,-22.318 -44.27,-22.853"
         }
       }, "letter")
-      .fromTo(leftEye, 0.2, {scale:0, opacity:0}, {scale:1, opacity: 1}, "face")
-      .fromTo(rightEye, 0.2, {scale:0, opacity:0}, {scale:1, opacity: 1}, "face")
-      .fromTo(mouth, 0.2, {scale:0, opacity:0}, {scale:1, opacity: 1}, "face")
+      .fromTo(leftEye, 0.2, {scale:0, opacity:0}, {scale:1, opacity: 1, visibility:'visible'}, "face")
+      .fromTo(rightEye, 0.2, {scale:0, opacity:0}, {scale:1, opacity: 1, visibility:'visible'}, "face")
+      .fromTo(mouth, 0.2, {scale:0, opacity:0}, {scale:1, opacity: 1, visibility:'visible'}, "face")
       .to(logo, 0.3, {
         transformOrigin: "50% 50%", 
         rotation: 12

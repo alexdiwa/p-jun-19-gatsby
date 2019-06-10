@@ -1,0 +1,27 @@
+@import "variables";
+
+.nav-links {
+  padding-left: 50px;
+  display: inline-block;
+
+  .current-page {
+    font-family: $hk-bold;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .nav-links {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+
+    li {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  }
+
+}

@@ -1,0 +1,254 @@
+@import "../components/variables";
+
+.portfolio {
+
+  .project {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 20px 10px;
+    margin: 0 0 50px 0;
+
+    h2 {
+      font-size: inherit;
+      grid-column: col-start 1 / span 8;
+      grid-row: 1;
+    }
+
+    h3 {
+      font-size: inherit;
+      grid-column: col-start 9 / span 4;
+      grid-row: 1;
+    }
+
+    .description {
+      grid-column: col-start 1 / span 12;
+      grid-row: 3 / span 2;
+    }
+
+    .tech-stack {
+      grid-column: col-start 1 / span 12;
+      grid-row: 5 / span 1;
+      font-family: $hk-med-italic;
+    }
+
+    .site-links {
+      grid-column: col-start 6 / span 7;
+      grid-row: 6 / span 2;    
+    }
+
+    .preview-image {
+      grid-column: col-start 1 / span 12;
+      grid-row: 8;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        background-color: $blue;
+      //   border: 2px solid $blue;
+      //   background-color: $blue;
+      //   box-shadow: 3px 3px $blue;
+      //   border-radius: 10px;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: inherit;
+}
+
+.screenshot {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+  justify-items: center;
+
+  .phone, .tablet, .laptop {
+    grid-column: 1 / span 1;
+    
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 620px) {
+
+  .portfolio {
+
+    .project {
+      grid-gap: 40px 30px;
+      margin: 30px 0;
+  
+      h2 {
+        font-size: inherit;
+        grid-column: col-start 1 / span 12;
+        grid-row: 1 ;
+      }
+  
+      h3 {
+        font-size: inherit;
+        grid-column: col-start 12 / span 1;
+        grid-row: 2 / span 3;
+        writing-mode: vertical-lr;
+      }
+  
+      .description {
+        grid-column: col-start 2 / span 9;
+        grid-row: 2 / span 3;
+      }
+
+      .tech-stack {
+        grid-column: col-start 2 / span 11;
+        grid-row: 5 / span 1;
+      }
+  
+      .site-links {
+        grid-column: col-start 9 / span 4;
+        grid-row: 6 / span 2;    
+      }
+  
+  
+      .preview-image {
+        grid-column: col-start 2 / span 6;
+        grid-row: 6 / span 5;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .screenshot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    
+    .laptop, .tablet, .phone {
+      flex: 1 1 auto;
+      margin: 20px;
+    }
+  }
+}
+
+
+
+// screenshot templates:
+
+.laptop {
+  max-width: 1000px;
+  background: $light;
+  border: 2px solid $blue;
+  box-shadow: 3px 3px $blue;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 30px 12fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: left;
+  overflow: hidden;
+
+  .bar {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 10fr;
+    grid-column-gap: 10px; 
+    padding-left: 10px;
+    
+    .sm-circle {
+      border: 2px solid $blue;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .screen {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    border-top: 2px solid $blue;
+  }
+
+
+}
+
+
+.tablet {
+  max-width: 600px;
+  background: $light;
+  border: 2px solid $blue;
+  box-shadow: 3px 3px $blue;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 0.8fr 8fr 0.8fr;
+  grid-template-columns: 1fr 20fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+
+  .screen {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    border: 2px solid $blue;
+    border-radius: 4px;
+  }
+
+  .circle {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    width: 8%;
+    height: 61%;
+    box-shadow: inset 1px 1px #AAAAAA;
+  }
+}
+
+.phone {
+  max-width: 325px;
+  background: $light;
+  border: 2px solid $blue;
+  box-shadow: 3px 3px $blue;
+  border-radius: 1.2em;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 19fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  .earhole {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    border: 3px solid $blue;
+    border-radius: 2px;
+    width: 17%;
+    margin-top: 2%;
+  }
+
+  .screen {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    border: 2px solid $blue;
+    border-radius: 4px;
+  }
+
+  .circle {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    width: 14%;
+    height: 62%;
+    box-shadow: inset 1px 1px #AAAAAA;
+  }
+}
+
+.funpassgen {
+  max-width: 500px;
+}
+
+.gatsby-image-wrapper {
+  width: 100%;
+}

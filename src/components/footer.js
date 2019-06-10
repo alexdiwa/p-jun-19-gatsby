@@ -2,7 +2,7 @@ import React from "react"
 import "./footer.scss"
 
 const Footer = () => (
-  <footer class="links">
+  <footer className="links">
     <ul>
       <li>
         <a href="/">GitHub</a>

@@ -1,7 +1,7 @@
 const path = require('path');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   const projectTemplate = path.resolve('src/templates/work-project.js');
 
@@ -15,6 +15,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               path
               title
+              date
+              description
+              stack
+              link
             }
           }
         }

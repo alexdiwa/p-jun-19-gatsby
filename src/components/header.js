@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import MyAnimation from "./gsap.js"
-import Menu from "./menu"
 import "./header.scss"
 
 
@@ -13,7 +12,10 @@ const Header = ({ siteTitle }) => (
         <div className="hidden">{siteTitle}</div>
         <MyAnimation></MyAnimation>
       </Link>
-      <Menu />
+      <ul className="nav-links">
+        <li><Link to="/work" activeClassName="current-page">Work</Link></li>
+        <li><Link to="/about" activeClassName="current-page">About</Link></li>
+      </ul>
     </nav>
   </header>
 )

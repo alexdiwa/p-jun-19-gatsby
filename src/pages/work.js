@@ -1,10 +1,43 @@
 import React from 'react'
 import Layout from "../components/layout"
+import { Link, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
-const WorkPage = () => (
+const WorkPage = ({data}) => (
   <Layout>
-    Work: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    {data.allMarkdownRemark.edges.map(project => (
+      <div key={ project.node.id }>
+        <h3>{ project.node.frontmatter.title }</h3>
+        <Img fluid={ project.node.frontmatter.image.childImageSharp.fluid } />
+        <Link to={ project.node.frontmatter.path }>Read More</Link>
+        <br />
+        <br />
+      </div>
+    ))}
   </Layout>
 )
+
+export const pageQuery = graphql`
+  query WorkIndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default WorkPage;

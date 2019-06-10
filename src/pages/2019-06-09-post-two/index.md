@@ -1,7 +1,7 @@
 ---
-path: "/post-two"
-date: "2019-06-09"
+path: "/project-two"
 title: "My second post"
+image: cocobuds-1-screen.png
 ---
 
 This is my second post

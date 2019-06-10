@@ -22,7 +22,10 @@ const WorkPage = ({data}) => (
 
 export const pageQuery = graphql`
   query WorkIndexQuery {
-    allMarkdownRemark(sort: {order: DESC, fields:[frontmatter___date]}) {
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}, 
+      filter: {frontmatter: {posttype: {eq: "project"}}}
+      ) {
       edges {
         node {
           id
@@ -32,7 +35,6 @@ export const pageQuery = graphql`
             date(formatString: "MMM 'YY")
             description
             stack
-            link
             image {
               childImageSharp {
                 fluid(maxWidth: 1000, quality: 100) {

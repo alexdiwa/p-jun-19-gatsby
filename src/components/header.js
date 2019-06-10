@@ -14,6 +14,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <ul className="nav-links">
         <li><Link to="/work" activeClassName="current-page">Work</Link></li>
+        <li><Link to="/blog" activeClassName="current-page">Blog</Link></li>
         <li><Link to="/about" activeClassName="current-page">About</Link></li>
       </ul>
     </nav>

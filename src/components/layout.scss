@@ -12,34 +12,41 @@ body {
   color: $blue;
   font-weight: normal; 
   font-style: normal;
-  font-size: 15pt;
+  font-size: 17pt;
   line-height: 1.7em;
 }
 
 a {
-  position: relative;
   text-decoration: none;
-  padding-bottom: 6px;
   color: inherit;
+  font-family: $hk-bold;
 }
 
-a::before {
-  content: '';
-  position: absolute;
-  height: 3px;
-  bottom: 0;
-  left: 5%;
-  right: 5%;
-  background-color: $blue;
-  transform-origin: bottom left;
-  transform: scaleX(1);
-  transition: transform 0.2s ease-in-out;
-}
+// HOVER EFFECT
+// a {
+//   position: relative;
+//   text-decoration: none;
+//   padding-bottom: 6px;
+//   color: inherit;
+// }
 
-a:hover::before {
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
+// a::before {
+//   content: '';
+//   position: absolute;
+//   height: 3px;
+//   bottom: 0;
+//   left: 5%;
+//   right: 5%;
+//   background-color: $blue;
+//   transform-origin: bottom left;
+//   transform: scaleX(1);
+//   transition: transform 0.2s ease-in-out;
+// }
+
+// a:hover::before {
+//   transform: scaleX(0);
+//   transform-origin: bottom right;
+// }
 
 ul {
   list-style: none;
@@ -57,7 +64,7 @@ ul {
 
 @media screen and (min-width: 550px) {
   body {
-    font-size: 18pt;
+    font-size: 24pt;
   }
 
   .container {

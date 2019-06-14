@@ -1,13 +1,75 @@
-@import url('https://fontlibrary.org/face/hk-grotesk');
+// FONTS
+
+@font-face {
+  font-family: 'HKGrotesk-Regular';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Regular.eot');
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Regular.svg#HKGrotesk-Regular') format('svg'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Regular.ttf') format('truetype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Regular.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HKGrotesk-Medium';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Medium.eot');
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Medium.svg#HKGrotesk-Medium') format('svg'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Medium.ttf') format('truetype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Medium.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HKGrotesk-MediumItalic';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-MediumItalic.eot');
+  src: url('./../fonts/HKGrotesk/HKGrotesk-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-MediumItalic.svg#HKGrotesk-MediumItalic') format('svg'),
+       url('./../fonts/HKGrotesk/HKGrotesk-MediumItalic.ttf') format('truetype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-MediumItalic.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-MediumItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HKGrotesk-SemiBold';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.eot');
+  src: url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.svg#HKGrotesk-SemiBold') format('svg'),
+       url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.ttf') format('truetype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HKGrotesk-Bold';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Bold.eot');
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Bold.svg#HKGrotesk-Bold') format('svg'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Bold.ttf') format('truetype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Bold.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// VARIABLES
 
 $pink: #FCD9E3;
-$hk: 'HKGroteskRegular';
-$hk-med: 'HKGroteskMedium';
-$hk-med-italic: 'HKGroteskMediumItalic';
-$hk-semibold: 'HKGroteskSemiBold';
-$hk-bold: 'HKGroteskBold';
+$hk: 'HKGrotesk-Regular';
+$hk-med: 'HKGrotesk-Medium';
+$hk-med-italic: 'HKGrotesk-MediumItalic';
+$hk-semibold: 'HKGrotesk-SemiBold';
+$hk-bold: 'HKGrotesk-Bold';
 $blue: #0057f4;
 $light: #EEEEEE;
-$green: #39870f;
+$green: #50534e;
 $orange: #F04300;
 $bg-color: #FFF;

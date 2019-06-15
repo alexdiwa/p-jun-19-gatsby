@@ -8,11 +8,9 @@ import "./header.scss"
 const Header = ({ siteTitle }) => (
   <header className="site-header">
     <nav className="main-navigation">
-      <Link id="homepage" to="/">
-        <div className="hidden">{siteTitle}</div>
-        <MyAnimation></MyAnimation>
-      </Link>
+      <div className="hidden">{siteTitle}</div>
       <ul className="nav-links">
+        <li><MyAnimation></MyAnimation></li>
         <li><Link to="/work" activeClassName="current-page">Work</Link></li>
         <li><Link to="/blog" activeClassName="current-page">Blog</Link></li>
         <li><Link to="/about" activeClassName="current-page">About</Link></li>

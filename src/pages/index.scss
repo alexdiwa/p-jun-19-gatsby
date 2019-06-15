@@ -1,0 +1,9 @@
+.landingpage {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.5fr 6fr 0.5fr;
+
+  .landingtext {
+    grid-column: 2 / span 1;
+  }
+}

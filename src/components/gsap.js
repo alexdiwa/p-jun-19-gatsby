@@ -1,11 +1,11 @@
 import React from "react"
 import { TimelineMax, Power2, Power4 } from "gsap"; 
 import "./gsap.scss"
+import { Link } from "gatsby"
 
 export default class MyAnimation extends React.Component {
   componentDidMount() {
     const logo = document.querySelector('.logo');
-    const homepage = document.querySelector('#homepage');
     const letterA = document.querySelector('#a');
     const letterD = document.querySelector('#d');
     const leftEye = document.querySelector('#left-eye');
@@ -37,7 +37,7 @@ export default class MyAnimation extends React.Component {
         rotation: 12
       });
     
-    homepage.addEventListener('mouseenter', () => {
+    logo.addEventListener('mouseenter', () => {
       if (letterLoad.isActive()) {
         letterLoad.pause(0);
         letterLoad.clear();
@@ -46,7 +46,7 @@ export default class MyAnimation extends React.Component {
       tlmLogo.play().timeScale(1);
     });
     
-    homepage.addEventListener('mouseleave', () => {
+    logo.addEventListener('mouseleave', () => {
       tlmLogo.reverse().timeScale(2);
     });
     
@@ -64,12 +64,14 @@ export default class MyAnimation extends React.Component {
   render() {
     return (
       <div>
-        <svg className="logo" style={{ width: `100px` }} viewBox="0 0 113 89" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
+        <svg className="logo" style={{ width: `70px` }} viewBox="0 0 113 89" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
+          <Link id="homepage" to="/">
           <path id="a" d="M45.452,21.193c0,0 1.247,9.783 -2.423,15.718c-3.427,5.542 -10.969,9.942 -20.496,9.66c-19.728,-0.583 -20.592,-28.891 -7.719,-37.947c10.903,-7.669 25.537,-0.074 28.681,7.289c4.342,10.168 3.618,12.506 4.144,20.509c0.466,7.081 0.079,9.256 0.238,12.434" fill="none" stroke="#000" strokeWidth="6"/>
           <path id="d" d="M103.392,45.792c0,0 -29.804,-7.678 -33.612,11.111c-3.808,18.789 7.434,28.34 22.364,25.488c14.929,-2.852 14.843,-17.955 14.222,-25.789c-2.606,-32.846 -12.432,-48.603 -13.454,-50.273" fill="none" stroke="#000" strokeWidth="6"/>
           <path id="mouth" d="M45.277,45.083c0,0 1.639,2.969 5.28,2.327c1.92,-0.339 3.296,-1.524 3.48,-4.442" fill="none" stroke="#000" strokeWidth="5"/>
           <path id="left-eye" d="M28.752,41.528c0,0 0.001,3.885 0.003,3.996" fill="none" stroke="#000" strokeWidth="5"/>
           <path id="right-eye" d="M70.787,31.428c0,0 0.174,1.429 0.615,3.948" fill="none" stroke="#000" strokeWidth="5"/>
+          </Link>
         </svg>
       </div>
     )

@@ -1,43 +1,24 @@
 @import "variables";
 
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-bottom: 50px;
-
-
-
-  #homepage {
-    margin: auto 0;
-
-    .hidden {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-      margin: 0;
-      padding: 0;
-    }
-    
-    &::before {
-      background-color: transparent;
-      height: 0;
-    }
-
-    .logo {
-      width: 100px;
-      padding-left: 10px;
-      flex: 0 0 auto;
-    }
+  .hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
   }
 
-  .nav-links {
-    padding-left: 50px;
-    display: inline-block;
-  
+  ul.nav-links {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    li:nth-child(n+2) {
+      text-align: center;
+    }
+
     .current-page {
-      font-family: $hk-bold;
-      font-weight: bold;
+      border-bottom: 3px solid $blue;
     }
   }
 
@@ -45,22 +26,4 @@ nav {
 
 @media screen and (min-width: 550px) {
 
-  nav {
-    padding-bottom: 20px;
-    justify-content: space-between;
-
-    .nav-links {
-      display: flex;
-      width: 50%;
-      justify-content: flex-end;
-      align-items: center;
-      flex-direction: row;
-  
-      li {
-        flex: 1 1 auto;
-        text-align: center;
-      }
-    }
-
-  }
 }

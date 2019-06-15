@@ -1,3 +1,15 @@
+@import "variables";
+
 #mouth, #left-eye, #right-eye {
   visibility: hidden;
+}
+
+.logo {
+  pointer-events: fill;
+}
+
+svg {
+  path {
+    stroke: $blue;
+  }
 }

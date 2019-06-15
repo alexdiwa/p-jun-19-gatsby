@@ -12,14 +12,14 @@ body {
   color: $blue;
   font-weight: normal; 
   font-style: normal;
-  font-size: 17pt;
+  font-size: 15pt;
   line-height: 1.7em;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  font-family: $hk-bold;
+  font-family: $hk-semibold;
 }
 
 // HOVER EFFECT
@@ -52,22 +52,41 @@ ul {
   list-style: none;
 
   li {
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
   }
 }
 
 .container {
   padding: 30px;
-  max-width: 1300px;
-  margin: 30px auto;
+  // max-width: 1300px;
+  // margin: 30px auto;
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(min-content, max-content) 1fr minmax(min-content, max-content);
+
+  .header {
+    align-content: start;
+  }
+
+  .main {
+    align-self: center;
+  }
+
+  .footer {
+    align-content: end;
+  }
 }
 
 @media screen and (min-width: 550px) {
   body {
-    font-size: 24pt;
+    font-size: 18pt;
   }
 
   .container {
-    padding: 70px 50px;
+    padding: 30px;
   }
 }

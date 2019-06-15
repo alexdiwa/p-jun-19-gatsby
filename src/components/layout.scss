@@ -8,7 +8,7 @@
 
 body {
   background-color: $bg-color;
-  font-family: $hk-med, Helvetica, Arial, sans-serif; 
+  font-family: $hk, 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   color: $blue;
   font-weight: normal; 
   font-style: normal;
@@ -16,50 +16,40 @@ body {
   line-height: 1.7em;
 }
 
+// HOVER EFFECT
 a {
+  position: relative;
   text-decoration: none;
+  padding-bottom: 6px;
   color: inherit;
-  font-family: $hk-semibold;
+  font-family: $hk-med,'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-// HOVER EFFECT
-// a {
-//   position: relative;
-//   text-decoration: none;
-//   padding-bottom: 6px;
-//   color: inherit;
-// }
+a::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  background-color: $blue;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.2s ease-in-out;
+}
 
-// a::before {
-//   content: '';
-//   position: absolute;
-//   height: 3px;
-//   bottom: 0;
-//   left: 5%;
-//   right: 5%;
-//   background-color: $blue;
-//   transform-origin: bottom left;
-//   transform: scaleX(1);
-//   transition: transform 0.2s ease-in-out;
-// }
-
-// a:hover::before {
-//   transform: scaleX(0);
-//   transform-origin: bottom right;
-// }
+a:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
 
 ul {
   list-style: none;
 
-  li {
-    // padding-bottom: 10px;
-  }
 }
 
 .container {
   padding: 30px;
-  // max-width: 1300px;
-  // margin: 30px auto;
   width: 100vw;
   min-height: 100vh;
   max-width: 100%;

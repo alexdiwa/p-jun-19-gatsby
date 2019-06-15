@@ -1,10 +1,18 @@
-// FONTS
-
 @font-face {
   font-family: 'HKGrotesk-Regular';
   src: url('./../fonts/HKGrotesk/HKGrotesk-Regular.ttf') format('truetype'),
        url('./../fonts/HKGrotesk/HKGrotesk-Regular.woff') format('woff'),
        url('./../fonts/HKGrotesk/HKGrotesk-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+000-5FF; 
+}
+
+@font-face {
+  font-family: 'HKGrotesk-Italic';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Italic.ttf') format('truetype'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Italic.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Italic.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   unicode-range: U+000-5FF; 
@@ -30,36 +38,10 @@
   unicode-range: U+000-5FF; 
 }
 
-@font-face {
-  font-family: 'HKGrotesk-SemiBold';
-  src: url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.ttf') format('truetype'),
-       url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.woff') format('woff'),
-       url('./../fonts/HKGrotesk/HKGrotesk-SemiBold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  unicode-range: U+000-5FF; 
-}
-
-@font-face {
-  font-family: 'HKGrotesk-Bold';
-  src: url('./../fonts/HKGrotesk/HKGrotesk-Bold.ttf') format('truetype'),
-       url('./../fonts/HKGrotesk/HKGrotesk-Bold.woff') format('woff'),
-       url('./../fonts/HKGrotesk/HKGrotesk-Bold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  unicode-range: U+000-5FF; 
-}
-
-// VARIABLES
-
 $hk: 'HKGrotesk-Regular';
-$hk-med: 'HKGrotesk-Regular';
-$hk-med-italic: 'HKGrotesk-MediumItalic';
-$hk-semibold: 'HKGrotesk-Medium';
-$hk-bold: 'HKGrotesk-Bold';
+$hk-italic: 'HKGrotesk-Italic';
+$hk-med: 'HKGrotesk-Medium';
+$hk-meditalic: 'HKGrotesk-MediumItalic';
 $blue: #0000FF;
-// 0057f4
 $light: #EEEEEE;
-$green: #50534e;
-$orange: #F04300;
 $bg-color:#FEE3FD;

@@ -13,6 +13,14 @@ nav {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
 
+    li:nth-child(1) {
+
+      a::before {
+        content: '';
+        height: 0px;
+      }
+    }
+
     li:nth-child(n+2) {
       text-align: center;
     }

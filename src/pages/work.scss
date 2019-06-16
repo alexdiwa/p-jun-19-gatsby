@@ -48,11 +48,7 @@
       img {
         object-fit: contain;
         width: 100%;
-        background-color: $blue;
-      //   border: 2px solid $blue;
-      //   background-color: $blue;
-      //   box-shadow: 3px 3px $blue;
-      //   border-radius: 10px;
+        background-color: $outline;
       }
     }
   }
@@ -143,8 +139,8 @@ h2 {
   max-width: 900px;
   width: 100%;
   background: $light;
-  border: 2px solid $blue;
-  box-shadow: inset 2px 2px $highlight, 3px 3px $blue;
+  border: 2px solid $outline;
+  box-shadow: inset 2px 2px 2px $highlight, 3px 3px $outline;
   border-radius: 10px;
   display: grid;
   grid-template-rows: 30px 12fr;
@@ -161,23 +157,23 @@ h2 {
     align-items: center;
     grid-column-gap: 10px; 
     padding-left: 10px;
-    box-shadow: inset -2px -2px $shadow; 
+    box-shadow: inset -2px -2px 2px $shadow; 
     width: 100%;
     height: 100%;
     
     .sm-circle {
-      border: 2px solid $blue;
+      border: 2px solid $outline;
       border-radius: 50%;
       width: 15px;
       height: 15px;
-      box-shadow: inset 1px 1px $highlight, inset -1px -1px $shadow;
+      box-shadow: inset 1px 1px 1px $highlight, inset -1px -1px 1px $shadow;
     }
   }
 
   .screen, .gatsby-resp-image-wrapper {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-    border-top: 2px solid $blue;
+    border-top: 2px solid $outline;
   }
 
 
@@ -188,8 +184,8 @@ h2 {
   max-width: 600px;
   width: 100%;
   background: $light;
-  border: 2px solid $blue;
-  box-shadow: inset 2px 2px $highlight, inset -2px -2px $shadow, 3px 3px $blue;
+  border: 2px solid $outline;
+  box-shadow: inset 2px 2px 2px $highlight, inset -2px -2px 2px $shadow, 3px 3px $outline;
   border-radius: 1.3em;
   display: grid;
   grid-template-rows: 0.8fr 8fr 0.8fr;
@@ -201,20 +197,20 @@ h2 {
   .screen, .gatsby-resp-image-wrapper {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    border: 2px solid $blue;
+    border: 2px solid $outline;
     border-radius: 6px;
-    box-shadow: 1px 1px $highlight, -1px -1px $shadow;
+    box-shadow: 1px 1px 1px $highlight, -1px -1px 1px $shadow;
     overflow: hidden;
   }
 
   .circle {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    border: 2px solid $blue;
+    border: 2px solid $outline;
     border-radius: 50%;
     width: 8%;
     height: 61%;
-    box-shadow: inset 1px 1px $shadow, 1px 1px $highlight;
+    box-shadow: inset 1px 1px 1px $shadow, 1px 1px 1px $highlight;
   }
 }
 
@@ -222,8 +218,8 @@ h2 {
   max-width: 325px;
   width: 100%;
   background: $light;
-  border: 2px solid $blue;
-  box-shadow: inset 2px 2px $highlight, inset -2px -2px $shadow, 3px 3px $blue;
+  border: 2px solid $outline;
+  box-shadow: inset 2px 2px 2px $highlight, inset -2px -2px 2px $shadow, 3px 3px $outline;
   border-radius: 1.2em;
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
@@ -234,30 +230,30 @@ h2 {
   .earhole {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    border: 3px solid $blue;
+    border: 3px solid $outline;
     border-radius: 2px;
     width: 17%;
     margin-top: 2%;
-    box-shadow: 1px 1px $highlight, -1px -1px $shadow;
+    box-shadow: 1px 1px 1px $highlight, -1px -1px 1px $shadow;
   }
 
   .screen, .gatsby-resp-image-wrapper {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    border: 2px solid $blue;
+    border: 2px solid $outline;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 1px 1px $highlight, -1px -1px $shadow;
+    box-shadow: 1px 1px 1px $highlight, -1px -1px 1px $shadow;
   }
 
   .circle {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    border: 2px solid $blue;
+    border: 2px solid $outline;
     border-radius: 50%;
     width: 13.5%;
     height: 62%;
-    box-shadow: inset 1px 1px $shadow, 1px 1px $highlight;
+    box-shadow: inset 1px 1px 1px $shadow, 1px 1px 1px $highlight;
   }
 }
 

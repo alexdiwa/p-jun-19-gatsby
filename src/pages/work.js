@@ -20,7 +20,7 @@ const WorkPage = ({data}) => (
           </div>
           <div className="site-links">
           <ul>
-            <li>{ project.node.frontmatter.path && <Link to={ project.node.frontmatter.path }>Screenshots</Link> }</li>
+            <li>{ project.node.frontmatter.path && <Link to={ project.node.frontmatter.path }>View Details</Link> }</li>
           </ul>
           </div>
           <div className="preview-image">
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
             stack
             image {
               childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
+                fluid(maxWidth: 700, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -8,4 +8,44 @@ stack: "Ruby"
 image: "./funpassgen-1-screen.png"
 ---
 
-THIS IS A PROJECT
+<div class="screenshot">
+
+  <div class="laptop funpassgen one">
+    <div class="bar">
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+    </div>
+    <img class="screen" src="funpassgen-1-screen.png">
+  </div>
+
+  <div class="laptop funpassgen two">
+    <div class="bar">
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+    </div>
+    <img class="screen" src="funpassgen-2-screen.png">
+  </div>
+
+  <div class="laptop funpassgen three">
+    <div class="bar">
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+    </div>
+    <img class="screen" src="funpassgen-3-screen.png">
+  </div>
+
+  <div class="laptop funpassgen four">
+    <div class="bar">
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+      <div class="sm-circle"></div>
+    </div>
+    <img class="screen" src="funpassgen-4-screen.png">
+  </div>
+
+</div>
+
+

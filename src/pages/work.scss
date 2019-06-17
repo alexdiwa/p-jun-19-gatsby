@@ -15,12 +15,14 @@
 
     h2 {
       font-size: inherit;
+      font-family: $hk-med;
       grid-column: col-start 1 / span 8;
       grid-row: 1;
     }
 
     h3 {
       font-size: inherit;
+      font-family: $hk-med;
       grid-column: col-start 9 / span 4;
       grid-row: 1;
     }
@@ -140,7 +142,7 @@ h2 {
   width: 100%;
   background: $light;
   border: 2px solid $outline;
-  box-shadow: inset 2px 2px 2px $highlight, 3px 3px $outline;
+  box-shadow: inset 2px 2px 2px $highlight, 3px 3px $outline-shadow;
   border-radius: 10px;
   display: grid;
   grid-template-rows: 30px 12fr;
@@ -185,7 +187,7 @@ h2 {
   width: 100%;
   background: $light;
   border: 2px solid $outline;
-  box-shadow: inset 2px 2px 2px $highlight, inset -2px -2px 2px $shadow, 3px 3px $outline;
+  box-shadow: inset 2px 2px 2px $highlight, inset -2px -2px 2px $shadow, 3px 3px $outline-shadow;
   border-radius: 1.3em;
   display: grid;
   grid-template-rows: 0.8fr 8fr 0.8fr;
@@ -219,7 +221,7 @@ h2 {
   width: 100%;
   background: $light;
   border: 2px solid $outline;
-  box-shadow: inset 2px 2px 2px $highlight, inset -2px -2px 2px $shadow, 3px 3px $outline;
+  box-shadow: inset 2px 2px 2px $highlight, inset -2px -2px 2px $shadow, 3px 3px $outline-shadow;
   border-radius: 1.2em;
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;

@@ -1,0 +1,16 @@
+@import "../components/variables";
+
+.blog {
+  max-width: 600px;
+  margin: 2em auto;
+
+  h2 {
+    font-family: $boldfont;
+    font-size: inherit;
+  }
+
+  h3 {
+    font-family: $mainfont;
+    font-size: inherit;
+  }
+}

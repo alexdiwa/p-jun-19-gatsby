@@ -1,13 +1,10 @@
 @import "../components/variables";
 
 .landingpage {
+  max-width: 800px;
+  margin: 2em auto;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
   text-align: center;
-  display: grid;
-  grid-template-columns: 0.5fr 6fr 0.5fr;
-
-  .landingtext {
-    grid-column: 2 / span 1;
-    font-size: 1.4em;
-    line-height: 1.5em;
-  }
 }

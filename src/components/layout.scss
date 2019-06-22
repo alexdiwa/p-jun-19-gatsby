@@ -6,43 +6,47 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: $bg-color;
   font-family: $mainfont, 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   color: $blue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400; 
   font-style: normal;
   font-size: 13pt;
-  line-height: 1.5em;
-  letter-spacing: 0.5px;
+  line-height: 1.9em;
+  letter-spacing: 0.2px;
 }
 
 // HOVER EFFECT
 a {
-  position: relative;
   text-decoration: none;
-  // padding-bottom: 6px;
   color: inherit;
   font-family: $mainfont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
-// a::before {
-//   content: '';
-//   position: absolute;
-//   height: 2px;
-//   bottom: 0;
-//   left: 5%;
-//   right: 5%;
-//   background-color: $alt;
-//   transform-origin: bottom left;
-//   transform: scaleX(1);
-//   transition: transform 0.2s ease-in-out;
-// }
+a::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $alt;
+  transform-origin: bottom center;
+  transform: scaleY(0.4);
+  transition: all 0.1s ease-in-out;
+}
 
-// a:hover::before {
-//   transform: scaleX(0);
-//   transform-origin: bottom right;
-// }
+a:hover::before {
+  transform: scaleY(1);
+  background-color: $alt;
+}
 
 ul {
   list-style: none;
@@ -74,7 +78,7 @@ ul {
 
 @media screen and (min-width: 550px) {
   body {
-    font-size: 14pt;
+    font-size: 16pt;
   }
 
   .container {

@@ -1,22 +1,7 @@
-
-
 @font-face {
-  font-family: 'manrope-extrabold';
-  src: url('./../fonts/manrope/manrope-extrabold.otf') format('opentype'),
-       url('./../fonts/manrope/manrope-extrabold.woff') format('woff'),
-       url('./../fonts/manrope/manrope-extrabold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF; 
-}
-
-
-@font-face {
-  font-family: 'manrope-semibold';
-  src: url('./../fonts/manrope/manrope-semibold.otf') format('opentype'),
-       url('./../fonts/manrope/manrope-semibold.woff') format('woff'),
-       url('./../fonts/manrope/manrope-semibold.woff2') format('woff2');
+  font-family: 'HKGrotesk-Medium';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Medium.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,10 +9,9 @@
 }
 
 @font-face {
-  font-family: 'manrope-medium';
-  src: url('./../fonts/manrope/manrope-medium.otf') format('opentype'),
-       url('./../fonts/manrope/manrope-medium.woff') format('woff'),
-       url('./../fonts/manrope/manrope-medium.woff2') format('woff2');
+  font-family: 'HKGrotesk-Bold';
+  src: url('./../fonts/HKGrotesk/HKGrotesk-Bold.woff') format('woff'),
+       url('./../fonts/HKGrotesk/HKGrotesk-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -35,11 +19,13 @@
 }
 
 
-$mainfont: 'manrope-semibold';
-// $medfont: 'manrope-semibold';
-$boldfont: 'manrope-extrabold';
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 
-$blue: #000;
+$mainfont: 'HKGrotesk-Medium';
+$boldfont: 'HKGrotesk-Bold';
+$code: 'Inconsolata';
+
+$blue: #222;
 $light: rgb(254, 227, 242);
 $bg-color:#FFF;
 $highlight: rgb(255, 245, 250);
@@ -47,7 +33,7 @@ $shadow: rgb(251, 210, 252);
 $alt: #EEE;
 $outline: #FAC6FB;
 $outline-shadow: #FAC6FB;
-$mainfontsize-lg: 14pt;
+$mainfontsize-lg: 16pt;
 $mainfontsize-sm: 12pt;
 
 

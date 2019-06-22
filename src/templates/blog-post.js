@@ -9,6 +9,8 @@ export default function Template({data}) {
   return (
     <Layout>
       <section className="blog-post">
+        <h1>{ blog.frontmatter.title }</h1>
+        <h2>{ blog.frontmatter.date }</h2>
         <div dangerouslySetInnerHTML={{ __html: blog.html }} />
         <Link to="/blog">Back to blogs</Link>
       </section>
@@ -23,6 +25,7 @@ export const blogPostQuery = graphql`
       frontmatter {
         path
         title
+        date(formatString: "DD MMM 'YY")
       }
     }
   }

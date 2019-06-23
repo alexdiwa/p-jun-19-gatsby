@@ -16,17 +16,25 @@
     margin-bottom: 20px;
   }
 
+  h3 {
+    font-weight: bold;
+  }
+
   div {
     p {
-      margin: 40px 0;
+      margin: 0 0 40px 0;
     }
 
-    pre {
-      line-height: 13pt;
+    pre, code[class*="language-"] {
+      line-height: 18pt;
+      width: 100%;
       font-size: 13pt;
-      code {
+      background-color: rgb(243, 243, 243);
+      // code {
         font-family: $code !important;
-      }
+        letter-spacing: -0.5px;
+        font-weight: 500;
+      // }
     }
   }
 }

@@ -14,7 +14,7 @@ There’s a handy article that explains a lot of the basics of regex [here](http
 
 Our task is to write a method generate_bc that takes in two arguments (a URL string and a separator) and returns a string of breadcrumbs in their HTML form. Breadcrumbs are a type of navigation that shows the location of a user within a website/app. For example:
 
-```
+```ruby
 url = 'https://github.com/alxdwa/codewars/blob/master/ruby/4_kyu/cw_breadcrumbs.rb'
 
 generate_bc(url, '>') # the method we need to write => 
@@ -25,5 +25,19 @@ generate_bc(url, '>') # the method we need to write =>
  <a href="/alxdwa/codewars/blob/master/ruby/4_kyu/">4_KYU</a> >
  <span class="active">CW_BREADCRUMBS</span>'
 
-Line breaks and ellipsis added for clarity.
+# Line breaks and ellipsis added for clarity.
 ```
+
+Which, rendered in a webpage would look like the following (‘links’ in bold):
+
+**HOME** > **ALXDWA** > **CODEWARS** > **BLOB** > **MASTER** > **RUBY** > **4_KYU** > CW_BREADCRUMBS
+
+Detailed instructions for our problem are on the [challenge’s page](https://www.codewars.com/kata/563fbac924106b8bf7000046).
+
+### Solving the problem in Plain English
+
+I started by writing out my approach to the problem before trying to code anything. These were the notes I took to get my thoughts in order:
+
+1. The first element in the answer is always `<a href="/">HOME</a>` so there’s no need to capture the domain name or anything before the first directory. Use this tag as a seed for an array of anchor/span tags (all strings).
+2. Capture all substrings in the URL between two instances of `/`, and place these in an array for storage. These will be the directory names included in the link tags e.g. `/codewars/`.
+3. Capture last keyword with leading (but no trailing) `/`, i.e. the current location of the user in the breadcrumb trail. The trailing character may instead be `.` or `?`. Add this element to the storage array in (2), unless the captured group is “index”.

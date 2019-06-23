@@ -41,29 +41,31 @@ $boldfont: 'HKGrotesk-Bold';
 
 $code: 'Roboto Mono';
 
-$blue: #000;
-$light: rgb(254, 227, 242);
-$bg-color:#DDD;
-$highlight: rgb(255, 245, 250);
-$shadow: rgb(251, 210, 252);
-$alt: #EEE;
-$outline: #FAC6FB;
-$outline-shadow: #FAC6FB;
-
-
-$mainfontsize-lg: 22px;
-$mainfontsize-sm: 14pt;
-
 $redcolor: rgb(255, 30, 0);
 $bluecolor: #00F;
 
+$blue: #000;
+$light: #DDD;
+$bg-color:#CCC;
+$highlight: #FFF;
+$shadow: #AAA;
+$alt: #00F;
+$outline: #000;
+$outline-shadow: #00F;
+
+
+$mainfontsize-lg: 20px;
+$mainfontsize-sm: 14pt;
+
+
+
 $borderwidth: 2px;
 $border: transparent;
-$headerbg: #DDD;
-$headerlink: $bluecolor;
-$footerbg: #DDD;
-$footerlink: $bluecolor;
-$svgcolor: $bluecolor;
+$headerbg: #CCC;
+$headerlink: #000;
+$footerbg: #CCC;
+$footerlink: #000;
+$svgcolor: #000;
 
 
 // nice yellow F9F4EA

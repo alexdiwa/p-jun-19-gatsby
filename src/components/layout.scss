@@ -46,18 +46,18 @@ a::before {
   position: absolute;
   z-index: -1;
   top: 0;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
-  background-color: $alt;
+  background-color: $redcolor;
   transform-origin: bottom center;
-  transform: scaleY(0.4);
+  transform: scaleY(0.3);
   transition: all 0.1s ease-in-out;
 }
 
 a:hover::before {
-  transform: scaleY(1);
-  background-color: $alt;
+  transform: scaleY(0.05);
+  background-color: #FFF;
 }
 
 ul {
@@ -81,13 +81,16 @@ ul {
 
     a {
       color: $headerlink;
-      // text-transform: uppercase;
     }
   }
 
   main {
     padding: 0 20px;
     align-self: center;
+  }
+
+  main > * + * {
+    margin-top: 20px;
   }
 
   footer {

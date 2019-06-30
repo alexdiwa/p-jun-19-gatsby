@@ -6,7 +6,7 @@
 @import "./work/archive.scss";
 
 .portfolio {
-
+  margin: 2em auto;
   .project {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);

@@ -18,14 +18,14 @@
   unicode-range: U+000-5FF; 
 }
 
-// @font-face {
-//   font-family: 'TEST';
-//   src: url('./../fonts/Trial/FavoritTrialPro-Regular.woff') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-//   font-display: swap;
-//   unicode-range: U+000-5FF; 
-// }
+@font-face {
+  font-family: 'TEST';
+  src: url('./../fonts/Trial/FavoritTrialStd-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF; 
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
@@ -42,28 +42,29 @@ $boldfont: 'HKGrotesk-Bold';
 $code: 'Roboto Mono';
 
 $redcolor: rgb(255, 30, 0);
+$pinkcolor: #FAC6FB;
 $bluecolor: #00F;
 
 $blue: #000;
 $light: #DDD;
-$bg-color:#CCC;
+$bg-color:#EEE;
 $highlight: #FFF;
 $shadow: #AAA;
 $alt: #00F;
 $outline: #000;
-$outline-shadow: #00F;
+$outline-shadow: #000;
 
 
 $mainfontsize-lg: 20px;
 $mainfontsize-sm: 14pt;
 
-
+$linkcolor: $pinkcolor;
 
 $borderwidth: 2px;
 $border: transparent;
-$headerbg: #CCC;
+$headerbg: #EEE;
 $headerlink: #000;
-$footerbg: #CCC;
+$footerbg: #EEE;
 $footerlink: #000;
 $svgcolor: #000;
 

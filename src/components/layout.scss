@@ -49,7 +49,7 @@ a::before {
   bottom: -1px;
   left: 0;
   right: 0;
-  background-color: $redcolor;
+  background-color: $linkcolor;
   transform-origin: bottom center;
   transform: scaleY(0.3);
   transition: all 0.1s ease-in-out;
@@ -70,7 +70,7 @@ ul {
   width: 100vw;
   min-height: 100vh;
   max-width: 100%;
-  display: grid;
+  display: block;
   grid-gap: 20px;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(min-content, max-content) 1fr minmax(min-content, max-content);
@@ -116,12 +116,12 @@ ul {
   // }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 650px) {
   body {
     font-size: $mainfontsize-lg;
   }
 
   .container {
-    // padding: 30px;
+    display: grid;
   }
 }

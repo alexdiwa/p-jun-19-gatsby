@@ -1,8 +1,9 @@
 @import "./../components/variables";
 
+
 .blog-post {
   max-width: 600px;
-  margin: 2em auto;
+  margin: 1em auto;
 
   h1 {
     font-size: 1.6em;
@@ -20,21 +21,25 @@
     font-weight: bold;
   }
 
-  div {
+  article {
+
+
+
     p {
       margin: 0 0 40px 0;
     }
+    
+    .gatsby-highlight {
+  
+      
+      pre[class*='language-'] {
 
-    pre, code[class*="language-"] {
-      line-height: 18pt;
-      width: 100%;
-      font-size: 13pt;
-      background-color: rgb(243, 243, 243);
-      // code {
-        font-family: $code !important;
-        letter-spacing: -0.5px;
-        font-weight: 500;
-      // }
+        code[class*="language-"] {
+
+      
+        }
+      }
     }
   }
 }
+

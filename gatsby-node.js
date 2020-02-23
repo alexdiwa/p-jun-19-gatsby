@@ -1,9 +1,11 @@
 const path = require('path');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
-  const postTemplate = path.resolve('src/templates/blog-post.js');
+  const projectTemplate = path.resolve('src/templates/project-post.js');
+  const blogTemplate = path.resolve('src/templates/blog-post.js');
+
 
   return graphql(`
     {
@@ -13,9 +15,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
+              posttype
               path
               title
               date
+              description
+              stack
             }
           }
         }
@@ -26,11 +31,22 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(res.errors)
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: postTemplate
-      })
-    })
+    res.data.allMarkdownRemark.edges.forEach(edge => {
+      if (edge.node.frontmatter.posttype === 'project') {
+        createPage({
+          path: edge.node.frontmatter.path,
+          component: projectTemplate,
+          context: {}
+        });
+      }   
+      else {
+          createPage({
+            path: edge.node.frontmatter.path,
+            component: blogTemplate,
+            context: {
+          },
+        })
+      }
+    })    
   })
 }

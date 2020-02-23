@@ -1,0 +1,37 @@
+@import "variables";
+
+nav {
+  .hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.nav-links {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    li:nth-child(1) {
+      a::before {
+        content: '';
+        height: 0px;
+      }
+    }
+
+    li:nth-child(n+2) {
+      text-align: center;
+      align-self: center;
+    }
+
+    .current-page {
+      font-family: $boldfont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+  }
+
+}
+
+@media screen and (min-width: 550px) {
+
+}

@@ -1,30 +1,31 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from "../components/layout"
+import "./blog-post.scss"
 
 export default function Template({data}) {
-  const post = data.markdownRemark
+  const blog = data.markdownRemark
 
   return (
-    <Layout> 
-      <div>
-        <Link to="/blog">Go Back</Link>
-        <hr />
-        <h4>Posted by Alex Diwa on { post.frontmatter.date }</h4>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+    <Layout>
+      <section className="blog-post">
+        <h1>{ blog.frontmatter.title }</h1>
+        <h2>{ blog.frontmatter.date }</h2>
+        <article dangerouslySetInnerHTML={{ __html: blog.html }} />
+        <Link to="/blog">Back to blogs</Link>
+      </section>
     </Layout>
   )
 }
 
-export const postQuery = graphql`
+export const blogPostQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }){
       html
       frontmatter {
         path
         title
-        date
+        date(formatString: "DD MMM 'YY")
       }
     }
   }

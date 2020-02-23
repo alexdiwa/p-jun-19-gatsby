@@ -1,0 +1,36 @@
+@media screen and (min-width: 620px) {
+
+  .screenshot {
+    
+    .laptop.funpassgen.one {
+      grid-area: 1 / 2 / 6 / 11;
+      z-index: 1;
+      justify-self: start;
+      max-width: 600px;
+    }
+
+    .laptop.funpassgen.two {
+      grid-area: 4 / 3 / 11 / 12;
+      z-index: 1;
+      justify-self: end;
+      max-width: 600px;
+      align-self: center;
+    }
+
+    .laptop.funpassgen.three {
+      grid-area: 10 / 2 / 16 / 11;
+      z-index: 1;
+      justify-self: center;
+      max-width: 600px;
+      align-self: center;
+    }
+
+    .laptop.funpassgen.four {
+      grid-area: 16 / 4 / 22 / 13;
+      z-index: 1;
+      justify-self: center;
+      max-width: 600px;
+      align-self: center;
+    }
+  }
+}

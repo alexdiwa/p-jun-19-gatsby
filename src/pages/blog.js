@@ -1,37 +1,39 @@
 import React from 'react'
 import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
+import "./blog.scss"
 
 const BlogPage = ({data}) => (
   <Layout>
-    <div>
-      <h1>Latest posts</h1>
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={ post.node.id }>
-          <h3>{ post.node.frontmatter.title }</h3>
-          <small>Posted by Alex on { post.node.frontmatter.date } </small>
+    <section className="blog">
+      {data.allMarkdownRemark.edges.map(blog => (
+        <div key={ blog.node.id }>
+          <h2>{ blog.node.frontmatter.title }</h2>
+          <h3>{ blog.node.frontmatter.date }</h3>
+          <h3>{ blog.node.frontmatter.description }</h3>
+          <Link to={ blog.node.frontmatter.path }>Read more</Link>
           <br />
           <br />
-          <Link to={ post.node.frontmatter.path }>Read More</Link>
-          <br />
-          <br />
-          <hr />
         </div>
       ))}
-    </div>
+    </section>
   </Layout>
 )
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}, 
+      filter: {frontmatter: {posttype: {eq: "blog"}}}
+      ) {
       edges {
         node {
           id
           frontmatter {
             path
             title
-            date
+            date(formatString: "DD MMM 'YY")
+            description
           }
         }
       }

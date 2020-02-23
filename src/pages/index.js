@@ -7,8 +7,8 @@ import "./index.scss"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <section className="landingpage">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    <section className="landing-text">
+      Alex Diwa is a Frontend Developer based in Sydney, Australia. Currently at <a className="sprig" href="https://www.growsuper.com/" target="_blank">GROW</a>
     </section>
   </Layout>
 )

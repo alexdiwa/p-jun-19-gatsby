@@ -1,0 +1,14 @@
+.sprig {
+  &::after {
+    content: '';
+    width: 18px;
+    height: 100%;
+    background: url('./../images/sprig.svg') no-repeat center right;
+    background-size: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    pointer-events: none;
+  }
+}

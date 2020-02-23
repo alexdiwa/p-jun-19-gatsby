@@ -1,5 +1,8 @@
 @import "normalize";
 @import "variables";
+@import "fonts";
+@import "links";
+@import "decorations";
 
 * {
   margin: 0;
@@ -8,9 +11,31 @@
 }
 
 body {
-
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-@media screen and (min-width: 650px) {
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 70px;
+  max-width: 700px;
+  margin: 0;
+  padding: 20px;
+}
 
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  .container {
+    margin: 100px 0;
+  }
 }

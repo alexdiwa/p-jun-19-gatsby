@@ -1,10 +1,44 @@
-@import "variables";
 
 nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.nav-links {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 300px;
+  margin-left: 40px;
 }
 
 .current-page {
   // font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.home {
+  line-height: 1;
+  height: 89px;
+  &::before {
+    background: transparent;
+  }
+
+  &:focus, &:active {
+    box-shadow: 0px 0px 0px 10px var(--color-highlight);
+    &::before {
+      background: var(--color-highlight);
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  nav {
+    justify-content: space-between;
+  }
+  .nav-links {
+    flex-direction: row;
+  }
 }

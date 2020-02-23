@@ -1,0 +1,11 @@
+
+#mouth, #left-eye, #right-eye {
+  visibility: hidden;
+}
+
+svg {
+  path {
+    stroke: var(--color-primary);
+    stroke-width: 5px;
+  }
+}
